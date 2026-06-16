@@ -49,6 +49,10 @@ Pedro
 María
 ```
 
+## Vista previa
+
+![Reporte de Ventas](images/captura.png)
+
 ## Autor
 
 Ricardo Romero
