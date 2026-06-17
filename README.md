@@ -2,7 +2,20 @@
 
 ## Descripción
 
-Proyecto básico de análisis de datos utilizando **Python** y **Pandas**. El programa genera un reporte de ventas que incluye el total vendido, el promedio de ventas, la venta más alta, la venta más baja y los clientes con ventas superiores a $1,000.
+Proyecto de análisis de datos desarrollado con **Python** y **Pandas**.
+
+El programa procesa un conjunto de ventas y genera un reporte con métricas clave para obtener información sobre clientes, productos y rendimiento de ventas.
+
+## Funcionalidades
+
+- Total vendido
+- Promedio de ventas
+- Venta más alta
+- Venta más baja
+- Clientes con ventas superiores a $1,000
+- Cantidad de productos distintos
+- Producto más vendido
+- Ventas totales por producto utilizando `groupby()`
 
 ## Tecnologías
 
@@ -25,17 +38,25 @@ python3 analisis.py
 
 ## Objetivo
 
-Practicar análisis de datos, manipulación de DataFrames y generación de reportes utilizando Pandas.
+Practicar conceptos fundamentales de análisis de datos utilizando Python y Pandas, incluyendo:
+
+- Lectura de archivos CSV
+- Manipulación de DataFrames
+- Filtrado de información
+- Estadísticas básicas
+- Agrupación de datos con `groupby()`
+- Conteo de registros con `value_counts()`
+- Generación de reportes
 
 ## Ejemplo de salida
 
 ```text
-==============================
+========================================
 REPORTE DE VENTAS
-==============================
+========================================
 
 Total vendido: $6,400.00
-Promedio: $1,280.00
+Promedio de ventas: $1,280.00
 
 Venta más alta:
 María - $2,000.00
@@ -44,17 +65,34 @@ Venta más baja:
 Ana - $800.00
 
 Clientes con ventas mayores a $1,000.00:
-Ricardo
-Pedro
-María
+- Ricardo
+- Pedro
+- María
+
+Productos distintos: 4
+
+Producto más vendido:
+Laptop - 2 ventas
+
+Ventas por producto:
+- Laptop: $2,700.00
+- Monitor: $2,000.00
+- Mouse: $800.00
+- Teclado: $900.00
 ```
 
-## Vista previa
+## Evolución del Proyecto
 
-![Reporte de Ventas](images/captura.png)
+### Versión inicial
+
+![Versión inicial](imagenes/reporte_v1.png)
+
+### Versión mejorada
+
+![Versión mejorada](imagenes/reporte_v2.png)
 
 ## Autor
 
-Ricardo Romero
+**Ricardo Romero**
 
-Proyecto realizado como práctica de análisis de datos con Python y Pandas.
+Proyecto realizado como parte de mi aprendizaje de Python y análisis de datos con Pandas.
