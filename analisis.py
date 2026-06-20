@@ -3,7 +3,7 @@ import pandas as pd
 # Leer archivo CSV
 df = pd.read_csv("ventas.csv")
 
-#Métricas generales
+# Métricas generales
 total = df["venta"].sum()
 promedio = df["venta"].mean()
 
@@ -26,53 +26,53 @@ productos_vendidos = df["producto"].value_counts()
 producto_mas_vendido = productos_vendidos.index[0]
 cantidad_vendida = productos_vendidos.iloc[0]
 
-# Reporte
-print("=" * 40)
-print("REPORTE DE VENTAS")
-print("=" * 40)
+# REPORTE
+with open("Reporte.txt", "w") as archivo:
 
-print(f"\nTotal vendido: ${total:,.2f}")
-print(f"Promedio de ventas: ${promedio:,.2f}")
+    archivo.write("=" * 40 + "\n")
+    archivo.write("REPORTE DE VENTAS\n")
+    archivo.write("=" * 40 + "\n\n")
 
-print("\nVenta más alta:")
-print(f"{cliente_venta_alta} - ${venta_alta:,.2f}")
+    archivo.write(f"Total vendido: ${total:,.2f}\n")
+    archivo.write(f"Promedio de ventas: ${promedio:,.2f}\n\n")
 
-print("\nVenta más baja:")
-print(f"{cliente_venta_baja} - ${venta_baja:,.2f}")
+    archivo.write("Venta más alta:\n")
+    archivo.write(f"{cliente_venta_alta} - ${venta_alta:,.2f}\n\n")
 
-print("\nClientes con ventas mayores a $1,000.00:")
-for cliente in clientes_mayor_1000:
-    print(f"- {cliente}")
+    archivo.write("Venta más baja:\n")
+    archivo.write(f"{cliente_venta_baja} - ${venta_baja:,.2f}\n\n")
 
-print(f"\nProductos distintos: {productos_distintos}")
+    archivo.write("Clientes con ventas mayores a $1,000.00:\n")
+    for cliente in clientes_mayor_1000:
+        archivo.write(f"- {cliente}\n")
 
-print("\nProducto más vendido:")
-print(f"{producto_mas_vendido} - {cantidad_vendida} ventas")
+    archivo.write(f"\nProductos distintos: {productos_distintos}\n\n")
 
-print("\nVentas por producto:")
-grupos = df.groupby("producto")
+    archivo.write("Producto más vendido:\n")
+    archivo.write(f"{producto_mas_vendido} - {cantidad_vendida} ventas\n\n")
 
-for nombre, grupo in grupos:
-    total_producto = grupo["venta"].sum()
-    print(f"- {nombre}: ${total_producto:,.2f}")
+    archivo.write("Ventas por producto:\n")
 
-print("\nProducto con mayor facturación:")
-mayor_facturacion = 0
-producto_top = ""
+    grupos = df.groupby("producto")
 
-for nombre, grupo in grupos:
-    total = grupo["venta"].sum()
-    if total > mayor_facturacion:
-        mayor_facturacion = total
-        producto_top = nombre
+    mayor_facturacion = 0
+    producto_top = ""
 
-print(f"- {producto_top}: ${mayor_facturacion:,.2f}")
+    for nombre, grupo in grupos:
+        total_producto = grupo["venta"].sum()
 
-print("\nTOP 3 CLIENTES")
-orden = df.sort_values("venta", ascending=False)
-top = orden.iloc[:3]
-nombres = top["cliente"]
-ventas = top["venta"]
+        archivo.write(f"- {nombre}: ${total_producto:,.2f}\n")
 
-for i in range(len(nombres)):
-    print(f"- {nombres.iloc[i]}: ${ventas.iloc[i]:,.2f}")
+        if total_producto > mayor_facturacion:
+            mayor_facturacion = total_producto
+            producto_top = nombre
+
+    archivo.write("\nProducto con mayor facturación:\n")
+    archivo.write(f"- {producto_top}: ${mayor_facturacion:,.2f}\n\n")
+
+    archivo.write("TOP 3 CLIENTES\n")
+
+    top = df.sort_values("venta", ascending=False).iloc[:3]
+
+    for i in range(len(top)):
+        archivo.write(f"- {top['cliente'].iloc[i]}: " f"${top['venta'].iloc[i]:,.2f}\n")

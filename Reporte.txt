@@ -1,0 +1,36 @@
+========================================
+REPORTE DE VENTAS
+========================================
+
+Total vendido: $6,400.00
+Promedio de ventas: $1,280.00
+
+Venta más alta:
+María - $2,000.00
+
+Venta más baja:
+Ana - $800.00
+
+Clientes con ventas mayores a $1,000.00:
+- Ricardo
+- Pedro
+- María
+
+Productos distintos: 4
+
+Producto más vendido:
+Laptop - 2 ventas
+
+Ventas por producto:
+- Laptop: $2,700.00
+- Monitor: $2,000.00
+- Mouse: $800.00
+- Teclado: $900.00
+
+Producto con mayor facturación:
+- Laptop: $2,700.00
+
+TOP 3 CLIENTES
+- María: $2,000.00
+- Pedro: $1,500.00
+- Ricardo: $1,200.00
