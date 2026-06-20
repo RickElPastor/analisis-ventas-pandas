@@ -3,7 +3,7 @@ import pandas as pd
 # Leer archivo CSV
 df = pd.read_csv("ventas.csv")
 
-# Métricas generales
+#Métricas generales
 total = df["venta"].sum()
 promedio = df["venta"].mean()
 
@@ -55,3 +55,24 @@ grupos = df.groupby("producto")
 for nombre, grupo in grupos:
     total_producto = grupo["venta"].sum()
     print(f"- {nombre}: ${total_producto:,.2f}")
+
+print("\nProducto con mayor facturación:")
+mayor_facturacion = 0
+producto_top = ""
+
+for nombre, grupo in grupos:
+    total = grupo["venta"].sum()
+    if total > mayor_facturacion:
+        mayor_facturacion = total
+        producto_top = nombre
+
+print(f"- {producto_top}: ${mayor_facturacion:,.2f}")
+
+print("\nTOP 3 CLIENTES")
+orden = df.sort_values("venta", ascending=False)
+top = orden.iloc[:3]
+nombres = top["cliente"]
+ventas = top["venta"]
+
+for i in range(len(nombres)):
+    print(f"- {nombres.iloc[i]}: ${ventas.iloc[i]:,.2f}")

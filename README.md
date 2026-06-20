@@ -79,6 +79,14 @@ Ventas por producto:
 - Monitor: $2,000.00
 - Mouse: $800.00
 - Teclado: $900.00
+
+Producto con mayor facturación:
+- Laptop: $2,700.00
+
+TOP 3 CLIENTES
+- María: $2,000.00
+- Pedro: $1,500.00
+- Ricardo: $1,200.00
 ```
 
 ## Evolución del Proyecto
@@ -90,6 +98,10 @@ Ventas por producto:
 ### Versión mejorada
 
 ![Versión mejorada](imagenes/reporte_v2.png)
+
+## Versión actual
+
+![Versión actual](imagenes/reporte_v3.png)
 
 ## Autor
 
