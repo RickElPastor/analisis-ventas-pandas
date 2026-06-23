@@ -4,7 +4,7 @@
 
 Proyecto de análisis de datos desarrollado con **Python** y **Pandas**.
 
-El programa procesa un conjunto de ventas y genera un reporte con métricas clave para obtener información sobre clientes, productos y rendimiento de ventas.
+El programa procesa un archivo CSV de ventas y genera automáticamente un reporte con métricas, estadísticas y rankings de clientes y productos. Además, exporta los resultados a un archivo de texto para su consulta posterior.
 
 ## Funcionalidades
 
@@ -16,6 +16,13 @@ El programa procesa un conjunto de ventas y genera un reporte con métricas clav
 - Cantidad de productos distintos
 - Producto más vendido
 - Ventas totales por producto utilizando `groupby()`
+- Producto con mayor facturación
+- TOP 3 clientes por monto de compra
+- Ventas totales por cliente
+- Cliente que más gastó
+- Cliente que menos gastó
+- Exportación automática del reporte a `Reporte.txt`
+- Validación de archivo CSV vacío
 
 ## Tecnologías
 
@@ -46,7 +53,9 @@ Practicar conceptos fundamentales de análisis de datos utilizando Python y Pand
 - Estadísticas básicas
 - Agrupación de datos con `groupby()`
 - Conteo de registros con `value_counts()`
-- Generación de reportes
+- Ordenamiento con `sort_values()`
+- Exportación de información a archivos de texto
+- Generación de reportes automáticos
 
 ## Ejemplo de salida
 
@@ -55,38 +64,55 @@ Practicar conceptos fundamentales de análisis de datos utilizando Python y Pand
 REPORTE DE VENTAS
 ========================================
 
-Total vendido: $6,400.00
-Promedio de ventas: $1,280.00
+Total vendido 
+- $6,400.00
 
-Venta más alta:
-María - $2,000.00
+Promedio de ventas 
+- $1,280.00
 
-Venta más baja:
-Ana - $800.00
+Venta más alta
+- María: $2,000.00
 
-Clientes con ventas mayores a $1,000.00:
+Venta más baja
+- Ana: $800.00
+
+Clientes con ventas mayores a $1,000.00
 - Ricardo
 - Pedro
 - María
 
-Productos distintos: 4
+Productos distintos 
+- 4 productos
 
-Producto más vendido:
-Laptop - 2 ventas
+Producto más vendido
+- Laptop: 2 ventas
 
-Ventas por producto:
+Ventas por producto
 - Laptop: $2,700.00
 - Monitor: $2,000.00
 - Mouse: $800.00
 - Teclado: $900.00
 
-Producto con mayor facturación:
+Producto con mayor facturación
 - Laptop: $2,700.00
 
 TOP 3 CLIENTES
 - María: $2,000.00
 - Pedro: $1,500.00
 - Ricardo: $1,200.00
+
+Ventas por clientes
+- María: $2,000.00
+- Pedro: $1,500.00
+- Ricardo: $1,200.00
+- Luis: $900.00
+- Ana: $800.00
+
+Cliente que más gastó
+- María: $2,000.00
+
+Cliente que menos gastó
+- Ana: $800.00
 ```
 
 ## Evolución del Proyecto
@@ -95,13 +121,19 @@ TOP 3 CLIENTES
 
 ![Versión inicial](imagenes/reporte_v1.png)
 
-### Versión mejorada
+### Segunda versión
 
-![Versión mejorada](imagenes/reporte_v2.png)
+![Segunda versión](imagenes/reporte_v2.png)
 
-## Versión actual
+### Tercera versión
 
-![Versión actual](imagenes/reporte_v3.png)
+![Tercera versión](imagenes/reporte_v3.png)
+
+### Versión 1.0
+
+![Versión 1.0 - Parte 1](imagenes/reporte_v4_1.png)
+
+![Versión 1.0 - Parte 2](imagenes/reporte_v4_2.png)
 
 ## Autor
 

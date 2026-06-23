@@ -45,3 +45,9 @@ Ventas por clientes
 - Ricardo: $1,200.00
 - Luis: $900.00
 - Ana: $800.00
+
+Cliente que más gastó
+- María: $2,000.00
+
+Cliente que menos gastó
+- Ana: $800.00
